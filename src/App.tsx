@@ -1,26 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Services from '@/components/Services';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import StaffAvailability from '@/components/StaffAvailability';
-import CTA from '@/components/CTA';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import HomePage from '@/pages/HomePage';
+import AboutPage from '@/pages/AboutPage';
+import ServicesPage from '@/pages/ServicesPage';
+import WhyUsPage from '@/pages/WhyUsPage';
+import ContactPage from '@/pages/ContactPage';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <WhyChooseUs />
-      <StaffAvailability />
-      <CTA />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/why-us" element={<WhyUsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
