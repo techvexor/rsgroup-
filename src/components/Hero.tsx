@@ -192,7 +192,7 @@ export default function Hero() {
           <div className="flex items-center justify-between bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20">
             {/* Slide Indicators */}
             <div className="flex items-center gap-3">
-              {heroSlides.map((slide, index) => (
+              {heroSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
