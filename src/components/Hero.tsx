@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, FileText, ChevronLeft, ChevronRight, Play, Pause, Shield, Clock, Users, Award } from 'lucide-react';
+import { Sparkles, FileText, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
 const heroSlides = [
   {
@@ -9,9 +9,7 @@ const heroSlides = [
     title: 'Premium Home Keeping Services',
     subtitle: 'You Can Trust',
     description: 'Expert facility management solutions with professionally trained staff for residential societies and corporate offices.',
-    badge: 'Premium Service',
-    stat: '100%',
-    statLabel: 'Satisfaction Rate'
+    badge: 'Premium Service'
   },
   {
     image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1920&q=85',
@@ -19,9 +17,7 @@ const heroSlides = [
     title: 'Expert Facility Management',
     subtitle: 'For Your Business',
     description: 'Comprehensive cleaning and maintenance services tailored for modern offices and commercial establishments.',
-    badge: 'Expert Team',
-    stat: '500+',
-    statLabel: 'Happy Clients'
+    badge: 'Expert Team'
   },
   {
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85',
@@ -29,9 +25,7 @@ const heroSlides = [
     title: 'Residential Society Services',
     subtitle: 'Complete Care',
     description: 'Dedicated housekeeping staff for housing societies with 24/7 availability and professional supervision.',
-    badge: 'Certified Staff',
-    stat: '24/7',
-    statLabel: 'Support Available'
+    badge: 'Certified Staff'
   },
   {
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=85',
@@ -39,17 +33,8 @@ const heroSlides = [
     title: 'Professional Maintenance',
     subtitle: 'Quality Assured',
     description: 'Trained and verified maintenance staff for plumbing, electrical, and general repairs with guaranteed quality.',
-    badge: 'Quality Assured',
-    stat: '10+',
-    statLabel: 'Years Experience'
+    badge: 'Quality Assured'
   }
-];
-
-const stats = [
-  { icon: Users, value: '500+', label: 'Happy Clients' },
-  { icon: Shield, value: '100%', label: 'Verified Staff' },
-  { icon: Clock, value: '24/7', label: 'Support' },
-  { icon: Award, value: '10+', label: 'Years' }
 ];
 
 export default function Hero() {
@@ -189,49 +174,10 @@ export default function Hero() {
                   Explore Services
                 </Link>
               </div>
-
-              {/* Stats Row - Desktop */}
-              <div className="hidden md:flex items-center gap-6">
-                {stats.map((stat, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10"
-                  >
-                    <div className="bg-primary-500/20 p-2 rounded-lg">
-                      <stat.icon size={20} className="text-primary-400" />
-                    </div>
-                    <div>
-                      <p className="text-xl font-bold text-white">{stat.value}</p>
-                      <p className="text-xs text-gray-300">{stat.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Right Side - Floating Cards (Desktop only) */}
-            <div className="hidden lg:block relative">
-              {/* Main Stat Card */}
-              <div 
-                className={`absolute top-1/2 -translate-y-1/2 right-0 bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 shadow-2xl transition-all duration-700 ${
-                  currentSlide >= 0 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-                }`}
-              >
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary-500 p-4 rounded-xl">
-                    <Sparkles className="text-white" size={32} />
-                  </div>
-                  <div>
-                    <p className="font-bold text-white text-4xl">
-                      {heroSlides[currentSlide].stat}
-                    </p>
-                    <p className="text-gray-300">
-                      {heroSlides[currentSlide].statLabel}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+            {/* Right Side - Decorative Elements (Desktop only) */}
+            <div className="hidden lg:block relative h-64">
               {/* Decorative Elements */}
               <div className="absolute top-20 right-20 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl animate-pulse" />
               <div className="absolute bottom-20 right-32 w-24 h-24 bg-accent-500/20 rounded-full blur-3xl animate-pulse delay-700" />
@@ -305,24 +251,6 @@ export default function Hero() {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Mobile Stats - Fixed Bottom */}
-      <div className="md:hidden fixed bottom-24 left-4 right-4 z-20">
-        <div className="flex justify-center gap-4 overflow-x-auto pb-2">
-          {stats.slice(0, 3).map((stat, index) => (
-            <div 
-              key={index}
-              className="flex-shrink-0 flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl px-3 py-2 border border-white/10"
-            >
-              <stat.icon size={16} className="text-primary-400" />
-              <div>
-                <p className="text-sm font-bold text-white">{stat.value}</p>
-                <p className="text-[10px] text-gray-300">{stat.label}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 

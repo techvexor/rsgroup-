@@ -44,9 +44,6 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-primary-600 font-semibold mb-2 uppercase tracking-wide text-sm">Contact Us</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Connect with RS Group
-          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Have questions or ready to book a service? Fill out the form below or contact us directly.
           </p>
@@ -190,6 +187,15 @@ export default function Contact() {
                     <p className="text-gray-600">info@rsgroup.com</p>
                   </div>
                 </a>
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="bg-gray-600 p-3 rounded-lg">
+                    <MapPin className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Address</p>
+                    <p className="text-gray-600">SECTOR MU-02 City<br />GREATER NOIDA, 201310,<br />UTTAR PRADESH, IN</p>
+                  </div>
+                </div>
               </div>
             </div>
 
