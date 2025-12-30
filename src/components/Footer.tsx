@@ -82,8 +82,9 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="text-primary-400 flex-shrink-0 mt-1" size={20} />
                 <span className="text-gray-400">
-                  123 Business District,<br />
-                  City Name, State 123456
+                  SECTOR MU-02 City<br />
+                  GREATER NOIDA, 201310,<br />
+                  UTTAR PRADESH, IN
                 </span>
               </li>
               <li>
