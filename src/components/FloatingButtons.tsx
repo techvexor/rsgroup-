@@ -1,8 +1,8 @@
 import { Phone, MessageCircle } from 'lucide-react';
 
 const FloatingButtons = () => {
-  const phoneNumber = '+971501234567'; // Replace with actual phone number
-  const whatsappNumber = '971501234567'; // WhatsApp format (no + or spaces)
+  const phoneNumber = '+918218106499'; // Replace with actual phone number
+  const whatsappNumber = '+918218106499'; // WhatsApp format (no + or spaces)
   const whatsappMessage = 'Hello! I am interested in your services.';
 
   return (
